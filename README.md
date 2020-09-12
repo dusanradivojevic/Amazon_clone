@@ -12,9 +12,13 @@ Material-UI and Flexbox are used for designing user interface that is similar to
 Firebase is Google's platform used for all back-end functionalities of this application: <br/>
  1. Application is hosted live on Firebase and can be accessed by clicking [here](https://clone-84d0e.web.app/). <br/>
  2. Firebase cloud functions are used for providing API REST service. Checkout that part of project by clicking [here](/functions). <br/>
- 3. Database used for storing users' data and details about their orders is Cloud Firestore, provided from Firebase. <br/>Cloud Firestore is a document based database which also has real time functionalities.
+ 3. Database used for storing users' data and details about their orders is Cloud Firestore, provided from Firebase. <br/>Cloud Firestore is a document based database which also has real time functionalities. Orders data stored within Firestore can be seen on the image below.
+ 
+![](firestore.png)
  
 Payment API used in application is Stripe. It provides online payment processing for internet businesses. Next image shows details of test transactions made within application using Stripe.
+
+![](payments.png)
  
 IDE used for development is Visual Studio Code.
  

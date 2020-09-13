@@ -63,8 +63,32 @@
   color: white;
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 .header__basketCount {
   margin: 0 10px;
+}
+
+.header__dropdownBasket {
+  display: none;
+  position: absolute;
+  background-color: rgb(255, 255, 255, 0.9);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  width: 250%;
+
+  padding: 20px;
+  right: 1px;
+  top: 40px;
+  border-radius: 5px;
+}
+
+.header__dropdownBasket > h3 {
+  color: black;
+  text-align: right;
+}
+
+.header__optionBasket:hover .header__dropdownBasket {
+  display: block;
 }

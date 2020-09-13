@@ -5,6 +5,8 @@ import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 import { Link } from "react-router-dom";
 import { auth } from "../firebase";
 import { useStateValue } from "../context/StateProvider";
+import CurrencyFormat from "react-currency-format";
+import { getBasketTotal } from "../context/reducer";
 
 function Header() {
   const [{ basket, user }] = useStateValue();
@@ -59,6 +61,17 @@ function Header() {
           <span className="header__optionLineTwo header__basketCount">
             {basket?.length}
           </span>
+
+          <div className="header__dropdownBasket">
+            <CurrencyFormat
+              renderText={(value) => <h3>Current Total: {value}</h3>}
+              decimalScale={2}
+              value={getBasketTotal(basket)}
+              displayType={"text"}
+              thousandSeparator={true}
+              prefix={"$"}
+            />
+          </div>
         </div>
       </Link>
     </div>

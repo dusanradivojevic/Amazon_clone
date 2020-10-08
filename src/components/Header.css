@@ -1,17 +1,19 @@
 .header {
-  height: 60px;
+  height: 7vh;
+  min-height: 50px;
   display: flex;
   align-items: center;
   background-color: black;
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 10;
 }
 
 .header__logo {
-  width: 100px;
-  margin: 0 20px;
-  margin-top: 18px;
+  width: 15vw;
+  max-width: 100px;
+  margin: 0 2vw;
+  margin-top: 1.8vw;
   object-fit: contain;
 }
 
@@ -34,7 +36,7 @@
   display: flex;
   align-items: center;
   flex: 1;
-  border-radius: 24px;
+  border-radius: 15px;
 }
 
 .header__nav {
@@ -46,8 +48,8 @@
   display: flex;
   flex-direction: column;
   color: white;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: 1.2vh;
+  margin-right: 1.2vh;
 }
 
 .header__optionLineOne {
@@ -67,19 +69,19 @@
 }
 
 .header__basketCount {
-  margin: 0 10px;
+  margin: 0 1vw;
 }
 
 .header__dropdownBasket {
   display: none;
   position: absolute;
   background-color: rgb(255, 255, 255, 0.9);
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0.8vw 1.6vw 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
   width: 250%;
 
-  padding: 20px;
-  right: 1px;
+  padding: 2vw;
+  right: 1vw;
   top: 40px;
   border-radius: 5px;
 }
@@ -91,4 +93,54 @@
 
 .header__optionBasket:hover .header__dropdownBasket {
   display: block;
+}
+
+@media (max-width: 1000px) {
+}
+
+@media (max-width: 768px) {
+  .header__searchInput {
+    height: 4.5vh;
+    padding: 1vw;
+    font-size: 2vw;
+  }
+  .header__searchIcon {
+    padding: 0.6vw;
+    height: 2vh;
+  }
+  .header__optionLineOne {
+    font-size: 1.5vw;
+  }
+
+  .header__optionLineTwo {
+    font-size: 1.8vw;
+    font-weight: 700;
+  }
+
+  .header__optionBasket > .MuiSvgIcon-root {
+    font-size: 3.5vw;
+  }
+
+  .header__dropdownBasket > h3 {
+    font-size: 2vw;
+  }
+}
+
+@media (max-width: 550px) {
+  .header__searchInput {
+    font-size: 2.5vw;
+    padding: 1.2vw;
+    height: 4vw;
+  }
+
+  .header__option {
+    margin-left: 0.4vw;
+    margin-right: 0.4vw;
+  }
+}
+
+@media (max-width: 400px) {
+  .header__searchInput {
+    padding: 1.4vw;
+  }
 }

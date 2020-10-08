@@ -20,8 +20,9 @@ function Checkout() {
         <h2 className="checkout__title">Your shopping Basket</h2>
 
         <FlipMove>
-          {basket.map((item) => (
+          {basket.map((item, index) => (
             <CheckoutProduct
+              key={item.id + index + 5}
               id={item.id}
               rating={item.rating}
               price={item.price}

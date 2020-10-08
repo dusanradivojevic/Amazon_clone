@@ -9,14 +9,6 @@ function Subtotal() {
   const history = useHistory();
   const [{ basket }] = useStateValue();
 
-  // const countTotal = () => {
-  //   let total = 0;
-  //   basket.forEach((item) => {
-  //     total += item.price;
-  //   });
-  //   return total;
-  // };
-
   return (
     <div className="subtotal">
       <CurrencyFormat

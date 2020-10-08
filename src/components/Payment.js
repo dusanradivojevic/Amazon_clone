@@ -36,11 +36,18 @@ function Payment() {
     getClientSecret();
   }, [basket]);
 
-  console.log("THE SECRET >>>>", clientSecret);
+  // console.log("THE SECRET >>>>", clientSecret);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     setProcessing(true);
+
+    if (clientSecret === true) {
+      setSucceeded(false);
+      setError(true);
+      setProcessing(false);
+      return;
+    }
 
     const payload = await stripe
       .confirmCardPayment(clientSecret, {
@@ -49,6 +56,13 @@ function Payment() {
         },
       })
       .then(({ paymentIntent }) => {
+        if (!paymentIntent) {
+          setSucceeded(false);
+          setError(true);
+          setProcessing(false);
+          return;
+        }
+
         // paymentIntent == payment confirmation
         db.collection("users")
           .doc(user?.uid)
@@ -63,6 +77,11 @@ function Payment() {
         setSucceeded(true);
         setError(null);
         setProcessing(false);
+
+        // adding user email to orders collection
+        db.collection("users").doc(user?.uid).set({
+          email: user?.email,
+        });
 
         dispatch({
           type: "EMPTY_BASKET",
@@ -104,8 +123,9 @@ function Payment() {
             <h3>Review items and delivery</h3>
           </div>
           <div className="payment__items">
-            {basket.map((item) => (
+            {basket.map((item, index) => (
               <CheckoutProduct
+                key={item.id + index + 7}
                 id={item.id}
                 rating={item.rating}
                 price={item.price}

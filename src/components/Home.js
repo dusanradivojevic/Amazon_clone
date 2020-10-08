@@ -14,6 +14,7 @@ function Home() {
 
         <div className="home__row">
           <Product
+            key="1"
             id="12321341"
             rating={5}
             price={29.99}
@@ -21,6 +22,7 @@ function Home() {
             image="https://images-na.ssl-images-amazon.com/images/I/51Zymoq7UnL._AC_SY400_.jpg"
           />
           <Product
+            key="2"
             id="49538094"
             rating={5}
             price={239.0}
@@ -31,6 +33,7 @@ function Home() {
 
         <div className="home__row">
           <Product
+            key="3"
             id="4903850"
             rating={3}
             price={199.99}
@@ -38,6 +41,7 @@ function Home() {
             image="https://www.did.ie/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/s/m/sm-r370nzkabt_2.jpg"
           />
           <Product
+            key="4"
             id="23445930"
             rating={5}
             price={98.99}
@@ -45,6 +49,7 @@ function Home() {
             image="https://media.very.co.uk/i/very/P6LTG_SQ1_0000000071_CHARCOAL_SLf?$300x400_retinamobilex2$"
           />
           <Product
+            key="5"
             id="325435435"
             rating={5}
             price={598.99}
@@ -55,6 +60,7 @@ function Home() {
 
         <div className="home__row">
           <Product
+            key="6"
             id="90829332"
             rating={4}
             price={1094.98}

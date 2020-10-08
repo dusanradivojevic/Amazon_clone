@@ -16,3 +16,17 @@
   text-align: right;
   font-weight: 400;
 }
+
+@media (max-width: 768px) {
+  .order {
+    padding: 5vw;
+  }
+}
+
+@media (max-width: 500px) {
+  .order__id {
+    position: absolute;
+    top: 0.2vh;
+    right: 1vw;
+  }
+}

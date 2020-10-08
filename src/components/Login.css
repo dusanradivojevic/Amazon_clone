@@ -8,12 +8,12 @@
 
 .login__logo {
   object-fit: contain;
-  margin: 20px auto;
-  width: 100px;
+  margin: 3vh auto;
+  width: 15vw;
 }
 
 .login__container {
-  width: 50%;
+  width: 70%;
   max-width: 300px;
   height: fit-content;
   display: flex;
@@ -33,7 +33,7 @@
 }
 
 .login__container > form > input {
-  height: 30px;
+  height: 3.5vh;
   margin-bottom: 10px;
   background-color: white;
   width: 95%;
@@ -42,13 +42,14 @@
 .login__container > p {
   margin-top: 15px;
   font-size: 12px;
+  width: 95%;
 }
 
 .login_signInBtn {
   background-color: orange;
   border-radius: 2px;
   width: 97%;
-  height: 30px;
+  height: 3.5vh;
   border: 1px solid;
   border-color: #a88734 #9c7e31 #846a29;
   color: black;
@@ -59,8 +60,33 @@
 .login_registerBtn {
   border-radius: 2px;
   width: 97%;
-  height: 30px;
+  height: 3.5vh;
   margin-top: 10px;
   border: 1px solid;
   border-color: darkgrey;
+}
+
+@media (max-width: 768px) {
+  .login__container > h1 {
+    font-size: 6vw;
+  }
+
+  .login__container > form > h5 {
+    font-size: 2.3vw;
+  }
+}
+
+@media (max-width: 500px) {
+  .login__container {
+    padding: 2.5vw;
+  }
+
+  .login__container > p {
+    margin-top: 2vw;
+    font-size: 2.3vw;
+  }
+  .login_signInBtn,
+  .login_registerBtn {
+    font-size: 3vw;
+  }
 }

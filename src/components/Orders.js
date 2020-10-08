@@ -32,8 +32,8 @@ function Orders() {
       <h1>Your Orders</h1>
 
       <div className="orders__container">
-        {orders?.map((order) => (
-          <Order order={order} />
+        {orders?.map((order, index) => (
+          <Order key={order.id + index} order={order} />
         ))}
       </div>
     </div>

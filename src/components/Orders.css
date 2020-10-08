@@ -3,5 +3,11 @@
 }
 
 .orders > h1 {
-  margin: 30px 0;
+  margin: 2.5vh 0;
+}
+
+@media (max-width: 768px) {
+  .orders {
+    padding: 2vh 4vw;
+  }
 }
